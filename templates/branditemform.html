@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brand Form</title>
+    </head>
+    <body>
+        <form method="post" action="/v1/brands/update">
+            <input type="hidden" name="txtId" value="{{ id }}">
+            <label>Brand Name:</label>
+            <input type="text" name="txtBrandName" id="txtBrandName" value="{{ brandname }}"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

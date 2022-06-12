@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Model Form</title>
+    </head>
+    <body>
+        <form method="post" action="/v1/models" enctype="multipart/form-data">
+            <label>Model Name:</label>
+            <input type="text" name="txtModelName" id="txtModelName"><br>
+            <label>Image:</label>
+            <input type="file" name="filePic" id="filePic"><br>
+            <label>Brand Name:</label>
+            <select name="slcBrandId">
+                {% for b in brands %}
+                    <option value="{{ b.brandid }}">{{ b.brandname }}</option>
+                {% endfor %}
+            </select><br>
+            <label>Description:</label>
+            <input type="text" name="txtDescription" id="txtDescription"><br>
+            <label>Price:</label>
+            <input type="text" name="txtPrice" id="txtPrice"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
